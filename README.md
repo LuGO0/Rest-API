@@ -1,5 +1,5 @@
 # Rest-API
- Spring-Boot Project
+ My Tinkering space for Learning Backend using Spring !
  
 ## Local Setup
 1. Clone the Project
