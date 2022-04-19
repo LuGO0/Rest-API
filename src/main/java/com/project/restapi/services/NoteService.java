@@ -2,6 +2,7 @@ package com.project.restapi.services;
 
 import com.project.restapi.entities.Note;
 import com.project.restapi.repository.NotesRepository;
+import jdk.internal.util.Preconditions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,8 +33,12 @@ public class NoteService {
     }
 
     // Optimistic Locking Scheme, will not use Transactional as reads way more than writes.
-    public Note updateNote(Note note) {
-        Note current = repository.getOne(note.getId());
+    public Note updateNote(Note note, Long id) {
+        if (id == null) {
+            // TODO need to add custom Error handling for requests @Advice
+        }
+
+        Note current = repository.getOne(id);
         current.setTitle(note.getTitle());
         current.setDetail(note.getDetail());
         // This already has the OptimisticLockException handled inside the merge method.

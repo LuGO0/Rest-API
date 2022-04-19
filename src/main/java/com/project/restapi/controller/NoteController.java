@@ -22,7 +22,7 @@ public class NoteController {
     @PutMapping("/{id}")
     public Note updateNote(@RequestBody Note note,
                                  @PathVariable("id") Long id) {
-        return service.updateNote(note);
+        return service.updateNote(note, id);
     }
 
     @GetMapping("")

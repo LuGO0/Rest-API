@@ -22,11 +22,11 @@ public class Note {
 	@Version
 	private Long version;
 
-	public long getVersion() {
+	public Long getVersion() {
 		return version;
 	}
 
-	public void setVersion(long version) {
+	public void setVersion(Long version) {
 		this.version = version;
 	}
 
