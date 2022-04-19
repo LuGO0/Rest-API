@@ -2,7 +2,7 @@ package com.project.restapi;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication // It enables auto config + ComponentScanning
 public class SpringApplication {
 
 	public static void main(String[] args) {

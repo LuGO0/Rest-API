@@ -22,6 +22,14 @@ public class Note {
 	@Version
 	private Long version;
 
+	public long getVersion() {
+		return version;
+	}
+
+	public void setVersion(long version) {
+		this.version = version;
+	}
+
 	public String getDetail() {
 		return detail;
 	}
